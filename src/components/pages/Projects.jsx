@@ -1,9 +1,11 @@
 import React from 'react'
 import ProjectDemoImage from "../../assets/ProjectDemoImage.png";
 
+
 const Projects = () => {
   return (
-    <div className='max-w-[1200px] mx-auto shadow-2xl shadow-blue-950 h-screen  grid grid-cols-1 gap-y-4 '>
+
+    <div className='max-w-[1200px] mx-auto  h-screen overflow-y-auto max-h-screen grid grid-cols-1 gap-y-4 '>
       <a
         href="https://github.com/RezaAbdollahi2002/ClockIn"
         target="_blank"
@@ -19,6 +21,7 @@ const Projects = () => {
       </a>
     </div>
   )
+
 }
 
 export default Projects

@@ -1,16 +1,22 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
+
 
 const Resume = () => {
   return (
-    <div className="mx-auto min-h-screen max-w-[1200px] bg-white pb-6 shadow-2xl shadow-blue-950">
-      <h1 className="pt-6 text-center text-3xl font-bold text-yellow-500">
+    <div className="mx-auto h-screen  pb-6 ">
+      <div className="flex justify-center gap-x-2">
+      <h1 className="pt-6 text-center text-3xl font-bold text-yellow-500 align-middle ">
         Resume
       </h1>
+      <button>
+        <FaDownload className="w-7 h-7 text-white ml-1 mt-5"/>
+      </button>
+      </div>
+      <hr className="my-4 shadow-2xl " />
 
-      <hr className="my-4" />
-
-      <div className="mx-auto max-w-[900px] bg-white px-4 py-6 text-sm text-gray-800 shadow-xl shadow-blue-900 md:text-base">
+      <div className="mx-auto max-h-[880px] overflow-y-auto  max-w-[900px] bg-white px-4 py-6 text-sm text-gray-800 shadow-xl  md:text-base">
         {/* Header */}
         <header className="text-center">
           <h2 className="text-2xl font-bold text-gray-900">

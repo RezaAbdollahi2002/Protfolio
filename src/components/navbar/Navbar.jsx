@@ -1,43 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router'
-import HomepageLogo from '../../assets/HomepageIcon.png'
+import React from 'react';
+import HomepageLogo from '../../assets/ProtfolioImage.jpg';
 
-const Navbar = () => {
+const Navbar = ({ isOn, setIsOn, setActivePage }) => {
+  const handleClick = () => {
+    setIsOn(false);
+    setActivePage(null);
+    // Clear localStorage when going back to menu
+    localStorage.removeItem('activePage');
+    localStorage.removeItem('isOn');
+  };
+
   return (
-    <div className='sticky top-0 z-50 text-sm md:text-medium font-semibold bg-blue-950 text-white px-3 py-1 max-w-300 mx-auto '>
-        <div className='w-full mx-auto'>
-            <ul className='flex gap-x-2 justify-center '>
-                <Link 
-            className='left-0 '
-            to={'/'}
+    <nav className='sticky top-0 z-20  bg-opacity-50 backdrop-blur-lg text-white px-3 py-3 w-full shadow-lg'>
+      <div className='max-w-7xl mx-auto'>
+        <ul className='flex gap-x-6 items-center justify-center text-white text-xl'>
+          <li>
+            <button 
+              className='flex items-center hover:opacity-80 transition-opacity'
+              onClick={handleClick}
             >
-                <img src={HomepageLogo}  className='w-9.5 h-9.5 rounded-full bg-transparent'/>
-            </Link>
-                <Link 
-                to={'/projects'}
-                className='hover:text-yellow-300 mt-2'>
-                    Projects
-                </Link>
-                <Link 
-                to={'/research'}
-                    className='hover:text-yellow-300 mt-2'
-                >
-                    Research
-                </Link>
-                <Link
-                to={'/resume'}
-                className='hover:text-yellow-300 mt-2'>
-                    Resume
-                </Link>
-                <Link 
-                to={'/contact'}
-                className='hover:text-yellow-300 mt-2'>
-                    Contact 
-                </Link>
-            </ul>
-        </div>
-    </div>
-  )
-}
+              <img 
+                src={HomepageLogo}  
+                className='w-22 h-22 rounded-full object-cover'
+                alt="Homepage Logo"
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

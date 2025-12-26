@@ -3,35 +3,33 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className="max-w-5xl min-h-screen mx-auto px-4 py-6 shadow-2xl shadow-blue-950">
+    <section className="w-full h-screen  px-4 py-6 ">
       {/* Header */}
       <header className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-yellow-500">
+        <h1 className="text-3xl md:text-6xl font-bold text-yellow-500 my-10">
           Contact
         </h1>
-        <hr className="my-4 border-blue-950" />
       </header>
 
       {/* Contact Information */}
-      <div className="flex flex-col gap-4 text-center mx-auto text-gray-800 justify-center">
+      <div className="flex flex-col gap-4 text-center mx-auto justify-center text-white">
         <div>
-          <p className="text-sm md:text-base font-semibold">
+          <p className="text-lg md:text-2xl font-semibold text-yellow-500">
             Email:
-            <span className="ml-2 font-normal">apa6323@psu.edu</span>
+            <span className=" ml-2 font-normal text-white">apa6323@psu.edu</span>
           </p>
         </div>
 
         <div>
-          <p className="text-sm md:text-base font-semibold">
+          <p className="text-lg md:text-2xl font-semibold text-yellow-500">
             Phone:
-            <span className="ml-2 font-normal">(814) 844-2498</span>
+            <span className="ml-2 font-normal text-white">(814) 844-2498</span>
           </p>
         </div>
 
         {/* Social Links */}
-        <div className="flex flex-col gap-3 pt-4 mx-auto text-left">
-          <div className="flex items-center gap-3">
-            <span className="text-sm md:text-base font-semibold">
+          <div className="flex justify-center items-center gap-3">
+            <span className="text-lg md:text-2xl font-semibold text-yellow-500">
               LinkedIn
             </span>
             <a
@@ -44,8 +42,8 @@ const Contact = () => {
             </a>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-sm md:text-base font-semibold">
+          <div className="flex justify-center items-center gap-3">
+            <span className="text-lg md:text-2xl font-semibold text-yellow-500">
               GitHub
             </span>
             <a
@@ -57,7 +55,6 @@ const Contact = () => {
               <FaGithub className="w-5 h-5 text-black hover:scale-110 transition-transform" />
             </a>
           </div>
-        </div>
       </div>
     </section>
   );
